@@ -190,7 +190,7 @@ a{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 1%;
   position: fixed;
-  left: 2%;
+  left: 3%;
   top: 50%;
   transform: translate(-50%, -50%);
 }

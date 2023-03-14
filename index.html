@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">
+    </div>
+    <div class=src>Photo by <a href="https://unsplash.com/@ryunosuke_kikuno?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ryunosuke Kikuno</a> on <a href="https://unsplash.com/photos/FKqxZ58bVjU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    </div>
+    <div class="library">
+      <button id="closeLibrary" onclick="closeLibrary()"><<</button>
+      <div id="myTable"></div>
+    </div>  
+    <button class="add" onclick="openForm()">NEW BOOK</button>
+    <button class="display" onclick="openLibrary()">OPEN LIBRARY</button>
+    <div class="popup" id="myForm">
+        <form method="post" class="container">
+          <label for="title"><b>Title</b></label>
+          <input type="text" name="title" id="title">
+          <label for="author"><b>Author</b></label>
+          <input type="text" name="author" id="author">
+          <label for="pages"><b>Number of Pages</b></label>
+          <input type="text" name="pages" id="pages">
+          <p><b>Have you read it?</b></p>
+          <label for="yes">Yes<input type="radio" id="read" name="read" id="yes" checked>
+          </label>
+          <label for="no">No
+            <input type="radio" id="notread" name="read" id="no">
+          </label>
+          <button type="submit" class="btn">Add</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+</body>
+</html>

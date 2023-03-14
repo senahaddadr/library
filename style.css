@@ -1,0 +1,247 @@
+* {
+    margin:0;
+    padding: 0;
+
+}
+
+body {
+    position:relative;
+    height: 100vh;
+}
+
+.background {
+    height: 100vh;
+    background-image: url(./library.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+}
+
+.display {
+  height: 48px;
+  width: 184px;
+  background-color: rgba(216, 216, 216, 0.35);
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgba(30, 100, 75, 0.8);
+  border: 1px solid rgba(30, 100, 50, 0.4);
+  word-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+
+.add {
+    height: 48px;
+    width: 184px;
+    background-color: rgba(216, 216, 216, 0.35);
+    position: absolute;
+    left: 50%;
+    top: 84%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgba(30, 100, 75, 0.8);
+    border: 1px solid rgb(30, 100, 50, 0.4);
+    font-size: 0.8rem;
+    word-spacing: 1px;
+    margin-bottom: 32px;
+}
+
+
+.add:hover, .display:hover, #closeLibrary:hover {
+    cursor: pointer;
+    background-color: rgba(216, 216, 216, 0.8);
+}
+
+.add:active .display:active {
+    transition: all 0.2s ease-out;
+    background-color: rgba(216, 216, 216, 0.2);
+    color: rgb(150, 196, 200);
+    font-size: 22px;
+    border:none;
+    word-spacing: 3px;
+    height: 500px;
+    width: 320px;    
+    box-shadow: -4px 0 8px rgba(0, 54, 0, 0.62),4px 0 8px rgba(0, 54, 0, 0.62);
+
+}
+
+.src { d
+    position:absolute;
+    bottom:0;
+    right:0.75%;
+    color: rgb(120, 120, 120);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  bottom: -20%;
+  transform: translate(-50%, -50%);
+  border: 2px ridge rgb(0, 100, 10, 0.3);
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 300px;
+  padding: 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+  font-size: 0.9rem;
+}
+
+.container input[type=text], .container input[type=password]{
+  width: 90%;
+  padding: 16px;
+  margin: 4px 0 24px 0;
+  border: 1px solid rgba(0, 128, 0, 0.3);
+  background: #f1f1f1;
+}
+
+.container input[type=text]:focus, .container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.container input[type=radio] {
+    display: inline;
+    width: 10%;
+    padding: 16px;
+    margin: 8px 0 16px 0;
+    border: none;
+}
+
+
+.container .btn {
+  background-color: #04aa33e4;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;  
+  border-radius: 10px;
+
+}
+
+.container .cancel {
+  background-color: rgba(194, 37, 37, 0.75);
+}
+
+.container .btn:hover, .add:hover {
+  opacity: 1;
+}
+
+.library{
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: red;
+  box-sizing: border-box;
+}
+
+#myTable {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  float: right;
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  border: 4px solid rgb(58, 119, 64);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#closeLibrary {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 16px 16px 16px;
+  width: 64px;
+  height: 96vh;
+  background-color: rgba(216, 216, 216, 0.55);
+  border: 1px solid rgba(30, 100, 50, 0.3);
+  color: rgba(30, 100, 93, 0.9);
+  font-weight: bold;
+  font-size: 0.7rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 1%;
+  position: fixed;
+  left: 2%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#closeLibrary:hover {
+  cursor: pointer;
+}
+
+ td {
+  border: 2px rgb(0, 100, 10);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+  font-weight: bold;
+  color: #365d4f;
+}
+
+#myTable button {
+  justify-content: center;
+  align-items: center;
+  margin-left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  width: 5vw;
+  height: fit-content;
+  color: #692626d6;
+  background-color: rgba(198, 198, 198, 0) ;
+  border: 1px solid rgba(7, 44, 7, 0.221);
+  border-radius: 8px;
+  padding: 4px;
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#myTable button:hover {
+  cursor: pointer;
+  background-color: #ffffff1e;
+}
+
+#myTable button:active {
+  background-color: rgba(184, 0, 0, 0.751);
+  color: #ddd;
+}
+
+th {
+  color: rgb(114, 128, 107);
+  background-color: rgba(8, 69, 7, 0.1);
+  width: 15vw;
+  height: 5vh;
+  font-size: 1.06rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ 
